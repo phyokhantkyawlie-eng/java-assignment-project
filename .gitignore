@@ -1,0 +1,9 @@
+*.class
+bin/
+target/
+out/
+build/
+.metadata/
+*.log
+.DS_Store
+Thumbs.db
