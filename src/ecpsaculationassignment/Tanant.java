@@ -1,11 +1,13 @@
 package ecpsaculationassignment;
 
 class Tenant extends Person {
+    private static int nextId = 1;
     private String tenantId;
 
-    public Tenant(String name, String phone, String tenantId) {
+    public Tenant(String name, String phone) {
         super(name, phone);
-        this.tenantId = tenantId;
+        this.tenantId = "T" + String.format("%03d", nextId);
+        nextId++;
     }
 
     public String getTenantId() {

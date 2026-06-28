@@ -47,9 +47,6 @@ public class Main {
                     System.out.print("Enter phone number: ");
                     String phone = input.nextLine();
 
-                    System.out.print("Enter tenant ID: ");
-                    String tenantId = input.nextLine();
-
                     System.out.print("Enter room number to book: ");
                     int roomNumber = input.nextInt();
                     input.nextLine();
@@ -70,7 +67,7 @@ public class Main {
                     } else if (!selectedApartment.isAvailable()) {
                         System.out.println("Room is already booked.");
                     } else {
-                        Tenant tenant = new Tenant(name, phone, tenantId);
+                        Tenant tenant = new Tenant(name, phone);
 
                         selectedApartment.bookRoom();
 
@@ -78,6 +75,7 @@ public class Main {
                         bookingCount++;
 
                         System.out.println("Apartment booked successfully!");
+                        System.out.println("Your Tenant ID is: " + tenant.getTenantId());
                     }
                 }
 

@@ -8,7 +8,6 @@ class Apartment {
     public Apartment(int roomNumber, double price) {
         this.roomNumber = roomNumber;
         this.price = price;
-        this.available = true;
     }
 
     public int getRoomNumber() {
